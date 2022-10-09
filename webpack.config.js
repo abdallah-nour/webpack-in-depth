@@ -5,7 +5,6 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index.js",
-    print: "./src/print.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -30,8 +29,12 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      title: "Development",
-    })
+      template: "./src/index.html"
+    }),
+    new HTMLWebpackPlugin({
+      template: "./src/pages/contact.html",
+      filename: "contact.html"
+    }),
   ],
   devtool: 'inline-source-map',
 }
