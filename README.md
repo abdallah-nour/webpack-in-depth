@@ -1,11 +1,14 @@
-# Responsive Side Navigation
+# Webpack In Depth
 
-## Features
+## To Do
 
-- [ ] Responsive
-- [ ] Using HTML5 and HTML Semantic Elements
-- [ ] Animated toggle button
-- [ ] Icons for nav list items
-- [ ] Dark/Light theme with CSS custom properties
-- [ ] Tooltip display title for hovered element when nav closed
-- [ ] Animate nav close/open with CSS transition & [cubic-bezier](https://cubic-bezier.com/)
+- [x] Basic Build Setup
+- [x] Handle Assets
+- [ ] Output Management
+- [ ] Build Dev Server
+- [ ] Code Splitting
+- [ ] Lazy Loading
+- [ ] Env Variables
+- [ ] HMR
+- [ ] TypeScript
+- [ ] ES6 And Beyond
