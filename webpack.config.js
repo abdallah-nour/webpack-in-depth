@@ -38,6 +38,7 @@ module.exports = {
   ],
   devtool: 'inline-source-map',
   optimization: {
+    moduleIds: 'deterministic', // make vendor hash stay consistent between builds
     runtimeChunk: 'single',
     splitChunks: {
       cacheGroups: {
