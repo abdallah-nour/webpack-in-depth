@@ -1,31 +1,32 @@
-import { join } from "lodash/array";
 import "./style.css";
+import testingImage from "./icon.png"
 // notice the order of imports reflect the order of console.log
 import(/* webpackPreload: true */ "./testPreloadImport");
 import(/* webpackPrefetch: true */ "./testPrefetchImport");
 
-console.log("output manage");
-
-function component() {
+async function importLodash() {
+  const { join } = await import("lodash/array");
   const element = document.createElement('div');
-  const btn = document.createElement('button');
-
-  element.innerHTML = join(['Hello', 'webpack'], ' ');
-
-  // button
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-  element.appendChild(btn);
-
-  // div style
-  element.classList.add('hello');
-
-  // image
-  const myIcon = new Image();
-  myIcon.src = Icon;
-  element.appendChild(myIcon);
-
+  element.innerHTML = join(['Lodash', 'imported', 'successfully'], ' ');
+  element.classList.add('red-text');
   return element;
 }
 
-document.body.appendChild(component());
+function getIcon() {
+  const icon = new Image();
+  icon.src = testingImage;
+  return icon;
+}
+
+function getButton() {
+  const btn = document.createElement('button');
+  btn.innerHTML = 'import Lodash';
+  btn.onclick = async () => {
+    const comp = await importLodash();
+    document.body.appendChild(comp);
+  }
+  return btn;
+}
+
+const elements = [getButton(), getIcon()];
+elements.forEach(elm => document.body.appendChild(elm))
