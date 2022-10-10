@@ -4,9 +4,9 @@
 
 - [x] Basic Build Setup
 - [x] Handle Assets
-- [ ] Output Management
-- [ ] Build Dev Server
-- [ ] Code Splitting
+- [x] Output Management
+- [x] Build Dev Server
+- [x] Code Splitting
 - [ ] Lazy Loading
 - [ ] Env Variables
 - [ ] HMR
