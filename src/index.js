@@ -1,7 +1,8 @@
 import { join } from "lodash/array";
 import "./style.css";
-import Icon from "./icon.png"
-import printMe from './print.js';
+// notice the order of imports reflect the order of console.log
+import(/* webpackPreload: true */ "./testPreloadImport");
+import(/* webpackPrefetch: true */ "./testPrefetchImport");
 
 console.log("output manage");
 
